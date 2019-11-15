@@ -42,7 +42,7 @@ class HideWithKeyboard extends Component {
 
   render() {
     if (this.state.keyboardUp) {
-      const style = this.props.style === undefined ? { display: 'none'; } : { ...this.props.style, display: 'none' };
+      const style = this.props.style === undefined ? { display: 'none' } : { ...this.props.style, display: 'none' };
       const props = this.props === undefined ? { style } : { ...this.props, style };
       return (
         <View {...props}>
@@ -69,7 +69,7 @@ HideWithKeyboard.propTypes = {
 class ShowWithKeyboard extends HideWithKeyboard {
   render() {
     if (!this.state.keyboardUp) {
-      const style = this.props.style === undefined ? { display: 'none'; } : { ...this.props.style, display: 'none' };
+      const style = this.props.style === undefined ? { display: 'none' } : { ...this.props.style, display: 'none' };
       const props = this.props === undefined ? { style } : { ...this.props, style };
       return (
         <View {...props}>
